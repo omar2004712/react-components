@@ -2,6 +2,7 @@ import { faker } from '@faker-js/faker';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
 function App() {
   return (
@@ -18,12 +19,14 @@ function App() {
         text="This is another comment"
         avatar={faker.image.avatar()}
       />
-      <CommentDetail
-        author="Pam"
-        timeAgo="Yesterday at 5:00PM"
-        text="This is another another comment"
-        avatar={faker.image.avatar()}
-      />
+      <ApprovalCard>
+        <CommentDetail
+          author="Pam"
+          timeAgo="Yesterday at 5:00PM"
+          text="This is another another comment"
+          avatar={faker.image.avatar()}
+        />
+      </ApprovalCard>
     </div>
   );
 }
